@@ -9,11 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Baha">
-        <activity android:name=".banks.BankDetailsActivity"></activity>
-        <activity android:name=".banks.BanksActivity" />
-        <activity android:name=".FundsActivity" />
-        <activity android:name=".StocksActivity" />
-        <activity android:name=".CryptoCurrenciesActivity" />
+        <activity android:name=".financial.SilverActivity"></activity>
+        <activity android:name=".financial.GoldActivity" />
+        <activity android:name=".financial.coin.CoinActivity" />
+        <activity android:name=".financial.banks.BankDetailsActivity" />
+        <activity android:name=".financial.banks.BanksActivity" />
+        <activity android:name=".financial.FundsActivity" />
+        <activity android:name=".financial.StocksActivity" />
+        <activity android:name=".financial.CryptoCurrenciesActivity" />
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name">

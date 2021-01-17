@@ -1,4 +1,4 @@
-package com.gandalf.baha.banks
+package com.gandalf.baha.financial.banks
 
 import android.content.Context
 import android.content.Intent
@@ -7,13 +7,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
-import com.gandalf.baha.CryptoCurrenciesActivity
-import com.gandalf.baha.FundsActivity
 import com.gandalf.baha.R
-import com.gandalf.baha.StocksActivity
 import com.gandalf.baha.gridlayout.AlphaAdapters
 import com.gandalf.baha.gridlayout.AlphaChar
 
@@ -23,7 +19,9 @@ class BanksAdapters (var context: Context, var arrayList: ArrayList<AlphaChar>):
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemHolder {
 
         val itemHolder= LayoutInflater.from(parent.context).inflate(R.layout.financial_layout_list_item,parent,false)
-        return ItemHolder(itemHolder)
+        return ItemHolder(
+            itemHolder
+        )
     }
 
     override fun getItemCount(): Int {

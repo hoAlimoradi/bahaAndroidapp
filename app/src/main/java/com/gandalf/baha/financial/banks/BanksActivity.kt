@@ -1,4 +1,4 @@
-package com.gandalf.baha.banks
+package com.gandalf.baha.financial.banks
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -26,7 +26,8 @@ class BanksActivity : AppCompatActivity() {
         recyclerView?.setHasFixedSize(true)
         arrayList=ArrayList()
         arrayList= setDataInList()
-        adapter = BanksAdapters(this , arrayList!!)
+        adapter =
+            BanksAdapters(this, arrayList!!)
         recyclerView?.adapter= adapter
     }
 

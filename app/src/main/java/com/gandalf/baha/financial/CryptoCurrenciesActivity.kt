@@ -1,11 +1,14 @@
-package com.gandalf.baha
+package com.gandalf.baha.financial
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.RadioButton
 import android.widget.RadioGroup
 import android.widget.TextView
+import com.gandalf.baha.R
+
 //CryptoCurrency
+//  silver
 class CryptoCurrenciesActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {

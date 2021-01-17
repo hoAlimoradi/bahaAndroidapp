@@ -1,4 +1,4 @@
-package com.gandalf.baha.ui.dashboard
+package com.gandalf.baha.lifeStyle
 
 import android.os.Bundle
 import android.view.LayoutInflater

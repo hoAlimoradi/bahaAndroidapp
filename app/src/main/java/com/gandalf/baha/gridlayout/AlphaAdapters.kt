@@ -10,11 +10,10 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
-import com.gandalf.baha.CryptoCurrenciesActivity
-import com.gandalf.baha.FundsActivity
-import com.gandalf.baha.R
-import com.gandalf.baha.StocksActivity
-import com.gandalf.baha.banks.BanksActivity
+import com.gandalf.baha.*
+import com.gandalf.baha.financial.*
+import com.gandalf.baha.financial.banks.BanksActivity
+import com.gandalf.baha.financial.coin.CoinActivity
 
 
 class AlphaAdapters(var context: Context, var arrayList: ArrayList<AlphaChar>):
@@ -46,6 +45,7 @@ class AlphaAdapters(var context: Context, var arrayList: ArrayList<AlphaChar>):
                     val intent = Intent(holder.alphas.context, StocksActivity::class.java)
                     startActivity(holder.alphas.context, intent, null)
                 }
+
                 2 -> {
                     val intent = Intent(holder.alphas.context, FundsActivity::class.java)
                     startActivity(holder.alphas.context, intent, null)
@@ -55,6 +55,21 @@ class AlphaAdapters(var context: Context, var arrayList: ArrayList<AlphaChar>):
                     val intent = Intent(holder.alphas.context, BanksActivity::class.java)
                     startActivity(holder.alphas.context, intent, null)
                 }
+
+                5 -> {
+                    val intent = Intent(holder.alphas.context, CoinActivity::class.java)
+                    startActivity(holder.alphas.context, intent, null)
+                }
+                6 -> {
+                    val intent = Intent(holder.alphas.context, GoldActivity::class.java)
+                    startActivity(holder.alphas.context, intent, null)
+                }
+
+                7 -> {
+                    val intent = Intent(holder.alphas.context, SilverActivity::class.java)
+                    startActivity(holder.alphas.context, intent, null)
+                }
+
 
                 else -> {
                     Toast.makeText(context,alphaChar.alphaChar,Toast.LENGTH_LONG).show()

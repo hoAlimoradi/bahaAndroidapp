@@ -4,6 +4,78 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".banks.BankDetailsActivity">
+    tools:context=".financial.banks.BankDetailsActivity">
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/humanRadioButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/btn_segmented_left"
+            android:button="@android:color/transparent"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="info"
+            android:textColor="@drawable/txt_segmented" />
+
+        <RadioButton
+            android:id="@+id/elfRadioButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/btn_segmented_center"
+            android:button="@android:color/transparent"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="vam"
+            android:textColor="@drawable/txt_segmented" />
+
+        <RadioButton
+            android:id="@+id/hobbitRadioButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/btn_segmented_center"
+            android:button="@android:color/transparent"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="samaneh"
+            android:textColor="@drawable/txt_segmented" />
+
+        <RadioButton
+            android:id="@+id/hobbitRadioButton2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/btn_segmented_right"
+            android:button="@android:color/transparent"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="Hobbit2"
+            android:textColor="@drawable/txt_segmented" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/emojiTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup"
+        tools:text="😄" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

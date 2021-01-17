@@ -1,4 +1,4 @@
-package com.gandalf.baha.ui.dashboard
+package com.gandalf.baha.lifeStyle
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
