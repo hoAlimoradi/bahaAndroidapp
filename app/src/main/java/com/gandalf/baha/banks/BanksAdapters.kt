@@ -1,4 +1,4 @@
-package com.gandalf.baha.gridlayout
+package com.gandalf.baha.banks
 
 import android.content.Context
 import android.content.Intent
@@ -8,21 +8,21 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
-import androidx.core.content.ContextCompat.startActivity
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.gandalf.baha.CryptoCurrenciesActivity
 import com.gandalf.baha.FundsActivity
 import com.gandalf.baha.R
 import com.gandalf.baha.StocksActivity
-import com.gandalf.baha.banks.BanksActivity
+import com.gandalf.baha.gridlayout.AlphaAdapters
+import com.gandalf.baha.gridlayout.AlphaChar
 
-
-class AlphaAdapters(var context: Context, var arrayList: ArrayList<AlphaChar>):
-    RecyclerView.Adapter<AlphaAdapters.ItemHolder>()
+class BanksAdapters (var context: Context, var arrayList: ArrayList<AlphaChar>):
+    RecyclerView.Adapter<BanksAdapters.ItemHolder>()
 {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemHolder {
 
-    val itemHolder=LayoutInflater.from(parent.context).inflate(R.layout.financial_layout_list_item,parent,false)
+        val itemHolder= LayoutInflater.from(parent.context).inflate(R.layout.financial_layout_list_item,parent,false)
         return ItemHolder(itemHolder)
     }
 
@@ -31,35 +31,21 @@ class AlphaAdapters(var context: Context, var arrayList: ArrayList<AlphaChar>):
     }
 
     override fun onBindViewHolder(holder: ItemHolder, position: Int) {
-        var alphaChar:AlphaChar=arrayList.get(position)
+        var alphaChar: AlphaChar =arrayList.get(position)
         holder.icons.setImageResource(alphaChar.iconsChar!!)
         holder.alphas.text=alphaChar.alphaChar
         holder.alphas.setOnClickListener{
-            when (position) {
-                0 -> {
-                    val intent = Intent(holder.alphas.context, CryptoCurrenciesActivity::class.java)
-                    startActivity(holder.alphas.context, intent, null)
-
-                }
-
-                1 -> {
-                    val intent = Intent(holder.alphas.context, StocksActivity::class.java)
-                    startActivity(holder.alphas.context, intent, null)
-                }
+            /*when (position) {
                 2 -> {
                     val intent = Intent(holder.alphas.context, FundsActivity::class.java)
-                    startActivity(holder.alphas.context, intent, null)
+                    ContextCompat.startActivity(holder.alphas.context, intent, null)
                 }
-
-                3 -> {
-                    val intent = Intent(holder.alphas.context, BanksActivity::class.java)
-                    startActivity(holder.alphas.context, intent, null)
-                }
-
                 else -> {
-                    Toast.makeText(context,alphaChar.alphaChar,Toast.LENGTH_LONG).show()
+                    Toast.makeText(context,alphaChar.alphaChar, Toast.LENGTH_LONG).show()
                 }
-            }
+            }*/
+            val intent = Intent(holder.alphas.context, BankDetailsActivity::class.java)
+            ContextCompat.startActivity(holder.alphas.context, intent, null)
         }
     }
     class ItemHolder(ItemView: View) : RecyclerView.ViewHolder(ItemView) {

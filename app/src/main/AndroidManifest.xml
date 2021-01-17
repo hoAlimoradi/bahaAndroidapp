@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Baha">
-        <activity android:name=".FundsActivity"></activity>
+        <activity android:name=".banks.BankDetailsActivity"></activity>
+        <activity android:name=".banks.BanksActivity" />
+        <activity android:name=".FundsActivity" />
         <activity android:name=".StocksActivity" />
         <activity android:name=".CryptoCurrenciesActivity" />
         <activity
